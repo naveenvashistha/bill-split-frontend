@@ -159,13 +159,13 @@ function BillSplit() {
           if (
             selectPlayer1.length === 0 || selectPlayer1[selectPlayer1.length - 1].value === "everyone"
           ) {    
-            let share = Number(Number(price.cost) / profile1.length).toFixed(2);
+            let share = Number(price.cost) / profile1.length;
             for (var i = 0; i < profile1.length; i++) {
               profile1[playerId].owe[i] += share;
             }
           } else {  
             // selectPlayer1.sort();
-            let share = Number((Number(price.cost) / selectPlayer1.length).toFixed(2));
+            let share = Number(price.cost) / selectPlayer1.length;
             for (var i = 0; i < selectPlayer1.length; i++) {
               profile1[playerId].owe[selectPlayer1[i].value] += share;
             }

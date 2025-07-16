@@ -19,13 +19,13 @@ function Transaction(props){
       
     if(item.sharedHow === "equally"){
       if (item.sharing.length === 0 || item.sharing.length === props.profile.length + 1){
-        let share = Number((Number(item.amount) / props.profile.length).toFixed(2));
+        let share = Number(item.amount) / props.profile.length;
         for (var i = 0; i < props.profile.length; i++){
           profile1[props.player.id].owe[i] -= share;
       }
     }
       else{
-      let share = Number((Number(item.amount) / item.sharing.length).toFixed(2));
+      let share = Number(item.amount) / item.sharing.length;
       for (var i=0;i<item.sharing.length;i++){
           profile1[props.player.id].owe[item.sharing[i].value] -= share;
       }
