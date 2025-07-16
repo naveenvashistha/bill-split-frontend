@@ -251,7 +251,7 @@ function BillSplit() {
     for (var i = 0; i < profile1.length; i++) {
       actualOwe1.push(new Array(profile1.length).fill(0));
       for (var j = 0; j < profile1.length; j++) {
-        share1[i] = Number(share1[i]) + Number(profile1[j].owe[i]);
+        share1[i] = Number((Number(share1[i]) + Number(profile1[j].owe[i])).toFixed(2));
       }
     }
 
