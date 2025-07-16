@@ -20,7 +20,7 @@ function BillSplit() {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("http://localhost:5000/api/billsplit")
+      .get("https://bill-split-backend.vercel.app/api/billsplit")
       .then((response) => {
         if (response.data.status === "ok") {
           var profile1 = response.data.result;
@@ -86,7 +86,7 @@ function BillSplit() {
     }
     setLoading(true);
     axios
-      .post("http://localhost:5000/api/billsplit", {
+      .post("https://bill-split-backend.vercel.app/api/billsplit", {
         updatedDetails: profile1,
       })
       .then(function (response) {
@@ -204,7 +204,7 @@ function BillSplit() {
         });
         setLoading(true);
         axios
-          .post("http://localhost:5000/api/billsplit", {
+          .post("https://bill-split-backend.vercel.app/api/billsplit", {
             updatedDetails: profile1,
           })
           .then(function (response) {
@@ -276,7 +276,7 @@ function BillSplit() {
     profile1[playerId].reminders.push(reminderText);
     setLoading(true);
     axios
-      .post("http://localhost:5000/api/billsplit", {
+      .post("https://bill-split-backend.vercel.app/api/billsplit", {
         updatedDetails: profile1,
       })
       .then(function (response) {
@@ -304,7 +304,7 @@ function BillSplit() {
     );
     setLoading(true);
     axios
-      .post("http://localhost:5000/api/billsplit", {
+      .post("https://bill-split-backend.vercel.app/api/billsplit", {
         updatedDetails: profile1,
       })
       .then(function (response) {

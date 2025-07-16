@@ -45,7 +45,7 @@ function Register() {
     event.preventDefault();
     setLoading(true);
     axios
-      .post("http://localhost:5000/api/", {
+      .post("https://bill-split-backend.vercel.app/api/", {
         userEmail: email,
         userTopic: topic,
       })

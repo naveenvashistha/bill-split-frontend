@@ -11,7 +11,7 @@ function Logout(props){
     const navigate = useNavigate();
    function userLogout(){
        setLoading(true);
-       axios.get("http://localhost:5000/api/logout")
+       axios.get("https://bill-split-backend.vercel.app/api/logout")
           .then((response)=>{
               setLoading(false);
               navigate("/login");

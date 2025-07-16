@@ -25,7 +25,7 @@ function Login() {
     event.preventDefault();
     setLoading(true);
     axios
-      .post("http://localhost:5000/api/login", {
+      .post("https://bill-split-backend.vercel.app/api/login", {
         userCode: code,
       })
       .then(function (response) {
