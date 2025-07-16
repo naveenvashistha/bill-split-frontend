@@ -25,7 +25,7 @@ function Login() {
     event.preventDefault();
     setLoading(true);
     axios
-      .post("https://bill-split-backend.vercel.app/api/login", {
+      .post("https://bill-split-backend-mcgw.onrender.com/api/login", {
         userCode: code,
       })
       .then(function (response) {

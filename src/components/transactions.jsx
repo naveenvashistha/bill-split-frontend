@@ -48,7 +48,7 @@ function Transaction(props){
     var actualOwe1 = [];
     [actualOwe1,share1] = props.calculateActualOweAndShare(actualOwe1,profile1,share1);
     props.setLoading(true);
-    axios.post('https://bill-split-backend.vercel.app/api/billsplit', {
+    axios.post('https://bill-split-backend-mcgw.onrender.com/api/billsplit', {
               updatedDetails: profile1
           })
           .then(function (response) {

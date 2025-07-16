@@ -45,7 +45,7 @@ function Register() {
     event.preventDefault();
     setLoading(true);
     axios
-      .post("https://bill-split-backend.vercel.app/api/", {
+      .post("https://bill-split-backend-mcgw.onrender.com/api/", {
         userEmail: email,
         userTopic: topic,
       })

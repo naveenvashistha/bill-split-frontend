@@ -20,8 +20,9 @@ function BillSplit() {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("https://bill-split-backend.vercel.app/api/billsplit")
+      .get("https://bill-split-backend-mcgw.onrender.com/api/billsplit")
       .then((response) => {
+        
         if (response.data.status === "ok") {
           var profile1 = response.data.result;
 
@@ -86,7 +87,7 @@ function BillSplit() {
     }
     setLoading(true);
     axios
-      .post("https://bill-split-backend.vercel.app/api/billsplit", {
+      .post("https://bill-split-backend-mcgw.onrender.com/api/billsplit", {
         updatedDetails: profile1,
       })
       .then(function (response) {
@@ -204,7 +205,7 @@ function BillSplit() {
         });
         setLoading(true);
         axios
-          .post("https://bill-split-backend.vercel.app/api/billsplit", {
+          .post("https://bill-split-backend-mcgw.onrender.com/api/billsplit", {
             updatedDetails: profile1,
           })
           .then(function (response) {
@@ -276,7 +277,7 @@ function BillSplit() {
     profile1[playerId].reminders.push(reminderText);
     setLoading(true);
     axios
-      .post("https://bill-split-backend.vercel.app/api/billsplit", {
+      .post("https://bill-split-backend-mcgw.onrender.com/api/billsplit", {
         updatedDetails: profile1,
       })
       .then(function (response) {
@@ -304,7 +305,7 @@ function BillSplit() {
     );
     setLoading(true);
     axios
-      .post("https://bill-split-backend.vercel.app/api/billsplit", {
+      .post("https://bill-split-backend-mcgw.onrender.com/api/billsplit", {
         updatedDetails: profile1,
       })
       .then(function (response) {
