@@ -260,10 +260,10 @@ function BillSplit() {
         if (i !== j) {
           if (profile1[i].owe[j] > profile1[j].owe[i]) {
             actualOwe1[i][j] =
-              Number(profile1[i].owe[j]) - Number(profile1[j].owe[i]);
+              Number((Number(profile1[i].owe[j]) - Number(profile1[j].owe[i])).toFixed(2));
           } else {
             actualOwe1[j][i] =
-              Number(profile1[j].owe[i]) - Number(profile1[i].owe[j]);
+              Number((Number(profile1[j].owe[i]) - Number(profile1[i].owe[j])).toFixed(2));
           }
         }
       }
